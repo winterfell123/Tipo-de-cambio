@@ -31,7 +31,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -51,6 +51,9 @@
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -63,26 +66,26 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID4">
+    <FlowStep x:Name="__ReferenceID5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,114.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <StateMachine InitialState="{x:Reference __ReferenceID3}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+      <StateMachine InitialState="{x:Reference __ReferenceID4}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="634,646" sap2010:WorkflowViewState.IdRef="StateMachine_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <av:Point x:Key="ShapeLocation">530,2.5</av:Point>
             <x:Double x:Key="StateContainerWidth">600</x:Double>
-            <x:Double x:Key="StateContainerHeight">600</x:Double>
+            <x:Double x:Key="StateContainerHeight">610</x:Double>
             <av:PointCollection x:Key="ConnectorLocation">530,51.25 370,51.25 370,69.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <State x:Name="__ReferenceID3" DisplayName="Credenciales" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_3">
+        <State x:Name="__ReferenceID4" DisplayName="Credenciales" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_3">
           <State.Entry>
             <Sequence sap:VirtualizedContainerService.HintSize="743,2973" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
@@ -319,7 +322,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <Transition.Condition>[SystemErrorCredentials Is Nothing]</Transition.Condition>
               <Transition.To>
-                <State x:Name="__ReferenceID1" DisplayName="State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_2">
+                <State x:Name="__ReferenceID0" DisplayName="State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_2">
                   <State.Entry>
                     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="701,1914" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                       <TryCatch.Try>
@@ -345,7 +348,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <If Condition="[inicio_global = 0]" sap:VirtualizedContainerService.HintSize="579,361" sap2010:WorkflowViewState.IdRef="If_3">
                               <If.Then>
-                                <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="434,213" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[origen.Rows(inicio_global).Item(1).ToString]">
+                                <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="434,213" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[origen.Rows(1).Item(1).ToString]">
                                   <ui:OpenBrowser.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
@@ -366,7 +369,7 @@
                             </If>
                             <If Condition="[inicio_global = 1]" sap:VirtualizedContainerService.HintSize="579,361" sap2010:WorkflowViewState.IdRef="If_4">
                               <If.Then>
-                                <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="434,213" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[origen.Rows(inicio_global).Item(1).ToString]">
+                                <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="434,213" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[origen.Rows(3).Item(1).ToString]">
                                   <ui:OpenBrowser.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
@@ -387,7 +390,7 @@
                             </If>
                             <If Condition="[inicio_global = 2]" sap:VirtualizedContainerService.HintSize="579,361" sap2010:WorkflowViewState.IdRef="If_5">
                               <If.Then>
-                                <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="434,213" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="[origen.Rows(inicio_global).Item(1).ToString]">
+                                <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="434,213" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="[origen.Rows(6).Item(1).ToString]">
                                   <ui:OpenBrowser.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
@@ -442,7 +445,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <State.Transitions>
-                    <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="450,507" sap2010:WorkflowViewState.IdRef="Transition_5">
+                    <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:PointCollection x:Key="ConnectorLocation">497,308.3 497,366.3 553,366.3 553,499.95 525,499.95</av:PointCollection>
@@ -452,31 +455,37 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <Transition.Condition>[SystemErrorOpenWeb Is Nothing]</Transition.Condition>
                       <Transition.To>
-                        <State x:Name="__ReferenceID2" DisplayName="Guardado de Datos" sap:VirtualizedContainerService.HintSize="987,2738" sap2010:WorkflowViewState.IdRef="State_5">
+                        <State x:Name="__ReferenceID2" DisplayName="Guardado de Datos" sap:VirtualizedContainerService.HintSize="172,94" sap2010:WorkflowViewState.IdRef="State_5">
                           <State.Entry>
-                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="941,2378" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,652" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                               <TryCatch.Try>
-                                <Sequence sap:VirtualizedContainerService.HintSize="903,2151" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <Sequence sap:VirtualizedContainerService.HintSize="304,425" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[inicio_global =0]" sap:VirtualizedContainerService.HintSize="861,2059" sap2010:WorkflowViewState.IdRef="If_6">
+                                  <If Condition="[inicio_global =0]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_6">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
                                     <If.Then>
-                                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Home'" sap:VirtualizedContainerService.HintSize="716,1911" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="dc9417719e20e8d5af3bc0a629caa469" Selector="&lt;html app='chrome.exe' title='Home - Portal SBS' /&gt;">
+                                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Home'" sap:VirtualizedContainerService.HintSize="706,2792" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="dc9417719e20e8d5af3bc0a629caa469" Selector="&lt;html app='chrome.exe' title='Home - Portal SBS' /&gt;">
                                         <ui:BrowserScope.Body>
                                           <ActivityAction x:TypeArguments="x:Object">
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                             </ActivityAction.Argument>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="682,1765" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="672,2646" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[Dt2]" DisplayName="Extract Structured Data 'TD'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="640,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100">
+                                              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[Dt2]" DisplayName="Extract Structured Data 'TD'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="630,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100">
                                                 <ui:ExtractData.Target>
                                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a2a4a25be5cbb32d8e765d3ca792089d" Selector="&lt;webctrl idx='1' tag='TABLE' /&gt;">
                                                     <ui:Target.TimeoutMS>
@@ -488,19 +497,19 @@
                                                   </ui:Target>
                                                 </ui:ExtractData.Target>
                                               </ui:ExtractData>
-                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="640,1527" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="630,2408" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="598,1435" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" WorkbookPath="[configuracion_global(&quot;destino TC&quot;).ToString+&quot;/Resultado_&quot;+Today.ToString(&quot;yyyy-MM-dd&quot;)+&quot;.xlsx&quot;]">
+                                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Private: Excel Application Scope" sap:VirtualizedContainerService.HintSize="588,2316" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" WorkbookPath="[configuracion_global(&quot;destino TC&quot;).ToString+&quot;/Resultado_&quot;+Today.ToString(&quot;yyyy-MM-dd&quot;)+&quot;.xlsx&quot;]">
                                                   <ui:ExcelApplicationScope.Body>
                                                     <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                                       <ActivityAction.Argument>
                                                         <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                                       </ActivityAction.Argument>
-                                                      <Sequence sap:VirtualizedContainerService.HintSize="454,1326" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="518,2207" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                                         <Sequence.Variables>
                                                           <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="result" />
                                                         </Sequence.Variables>
@@ -509,8 +518,8 @@
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:Matches sap:VirtualizedContainerService.HintSize="412,59" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[Dt2.Rows(0).Item(0).ToString]" IsBuilderTabModified="False" Pattern="\d+(\.\d{1,9})?" RegexOption="IgnoreCase, Compiled" Result="[result]" />
-                                                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412,385" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[result]">
+                                                        <ui:Matches sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[Dt2.Rows(0).Item(0).ToString]" IsBuilderTabModified="False" Pattern="\d+(\.\d{1,9})?" RegexOption="IgnoreCase, Compiled" Result="[result]" />
+                                                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="476,386" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[result]">
                                                           <ui:ForEach.Body>
                                                             <ActivityAction x:TypeArguments="x:Object">
                                                               <ActivityAction.Argument>
@@ -545,14 +554,14 @@
                                                             </ActivityAction>
                                                           </ui:ForEach.Body>
                                                         </ui:ForEach>
-                                                        <ui:Matches sap:VirtualizedContainerService.HintSize="412,59" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[Dt2.Rows(0).Item(1).ToString]" IsBuilderTabModified="False" Pattern="\d+(\.\d{1,9})?" RegexOption="IgnoreCase, Compiled" Result="[result]" />
-                                                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412,484" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[result]">
+                                                        <ui:Matches sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[Dt2.Rows(0).Item(1).ToString]" IsBuilderTabModified="False" Pattern="\d+(\.\d{1,9})?" RegexOption="IgnoreCase, Compiled" Result="[result]" />
+                                                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="476,386" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[result]">
                                                           <ui:ForEach.Body>
                                                             <ActivityAction x:TypeArguments="x:Object">
                                                               <ActivityAction.Argument>
                                                                 <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                                                               </ActivityAction.Argument>
-                                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,351" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                                                 <Sequence.Variables>
                                                                   <Variable x:TypeArguments="ui:GenericValue" Name="documento" />
                                                                 </Sequence.Variables>
@@ -561,7 +570,7 @@
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
                                                                   <Assign.To>
                                                                     <OutArgument x:TypeArguments="ui:GenericValue">[documento]</OutArgument>
                                                                   </Assign.To>
@@ -569,7 +578,7 @@
                                                                     <InArgument x:TypeArguments="ui:GenericValue">[item.ToString]</InArgument>
                                                                   </Assign.Value>
                                                                 </Assign>
-                                                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                                                                   <Assign.To>
                                                                     <OutArgument x:TypeArguments="x:Object">[Origen.Rows(1).Item(2)]</OutArgument>
                                                                   </Assign.To>
@@ -577,12 +586,90 @@
                                                                     <InArgument x:TypeArguments="x:Object">[documento]</InArgument>
                                                                   </Assign.Value>
                                                                 </Assign>
-                                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[Origen.Rows(1).Item(2)]" />
                                                               </Sequence>
                                                             </ActivityAction>
                                                           </ui:ForEach.Body>
                                                         </ui:ForEach>
-                                                        <ui:ExcelWriteRange AddHeaders="True" DataTable="[origen]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="412,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="DatosSBS">
+                                                        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="476,876" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="434,784" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" Url="[origen.Rows(2).Item(1).ToString]">
+                                                            <ui:OpenBrowser.Body>
+                                                              <ActivityAction x:TypeArguments="x:Object">
+                                                                <ActivityAction.Argument>
+                                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                                </ActivityAction.Argument>
+                                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="382,685" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                                  <Sequence.Variables>
+                                                                    <Variable x:TypeArguments="x:String" Name="promedio" />
+                                                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="promedio1" />
+                                                                  </Sequence.Variables>
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="340,68" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                                                                    <ui:GetValue.Target>
+                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Bolsa de Valores de Lima' /&gt;&lt;webctrl aaname='Dólar: S/*' tag='SPAN' /&gt;">
+                                                                        <ui:Target.TimeoutMS>
+                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                        </ui:Target.TimeoutMS>
+                                                                        <ui:Target.WaitForReady>
+                                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                        </ui:Target.WaitForReady>
+                                                                      </ui:Target>
+                                                                    </ui:GetValue.Target>
+                                                                    <ui:GetValue.Value>
+                                                                      <OutArgument x:TypeArguments="x:String">[promedio]</OutArgument>
+                                                                    </ui:GetValue.Value>
+                                                                  </ui:GetValue>
+                                                                  <ui:Matches sap:VirtualizedContainerService.HintSize="340,59" sap2010:WorkflowViewState.IdRef="Matches_4" Input="[promedio]" IsBuilderTabModified="False" Pattern="\d+(\.\d{1,9})?" RegexOption="IgnoreCase, Compiled" Result="[promedio1]" />
+                                                                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="340,386" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[promedio1]">
+                                                                    <ui:ForEach.Body>
+                                                                      <ActivityAction x:TypeArguments="x:Object">
+                                                                        <ActivityAction.Argument>
+                                                                          <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                                                                        </ActivityAction.Argument>
+                                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                                                          <Sequence.Variables>
+                                                                            <Variable x:TypeArguments="ui:GenericValue" Name="documento" />
+                                                                          </Sequence.Variables>
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                                                            <Assign.To>
+                                                                              <OutArgument x:TypeArguments="ui:GenericValue">[documento]</OutArgument>
+                                                                            </Assign.To>
+                                                                            <Assign.Value>
+                                                                              <InArgument x:TypeArguments="ui:GenericValue">[item.ToString]</InArgument>
+                                                                            </Assign.Value>
+                                                                          </Assign>
+                                                                          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                                                            <Assign.To>
+                                                                              <OutArgument x:TypeArguments="x:Object">[Origen.Rows(2).Item(2)]</OutArgument>
+                                                                            </Assign.To>
+                                                                            <Assign.Value>
+                                                                              <InArgument x:TypeArguments="x:Object">[documento]</InArgument>
+                                                                            </Assign.Value>
+                                                                          </Assign>
+                                                                        </Sequence>
+                                                                      </ActivityAction>
+                                                                    </ui:ForEach.Body>
+                                                                  </ui:ForEach>
+                                                                </Sequence>
+                                                              </ActivityAction>
+                                                            </ui:OpenBrowser.Body>
+                                                          </ui:OpenBrowser>
+                                                        </Sequence>
+                                                        <ui:ExcelWriteRange AddHeaders="True" DataTable="[origen]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="476,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="DatosSBS">
                                                           <ui:ExcelWriteRange.StartingCell>
                                                             <InArgument x:TypeArguments="x:String">
                                                               <Literal x:TypeArguments="x:String" Value="" />
@@ -605,10 +692,867 @@
                                       </ui:BrowserScope>
                                     </If.Then>
                                   </If>
+                                  <If Condition="[inicio_global = 1]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_11">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If.Then>
+                                      <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="814,3231" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="ui:GenericValue" Name="DivCtlCphcontentR" />
+                                          <Variable x:TypeArguments="x:Int32" Default="0" Name="cont" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Anexar navegador 'Wwwsbsgob Page'" sap:VirtualizedContainerService.HintSize="772,3139" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="c2959c5dfb4721f41b70f2fb9c5a4c21" Selector="&lt;html app='chrome.exe' title='www.sbs.gob.pe/app/pp/SISTIP_PORTAL/Paginas/Publicacion/TipoCamb*' /&gt;">
+                                          <ui:BrowserScope.Body>
+                                            <ActivityAction x:TypeArguments="x:Object">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="738,2993" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="s:String[]" Name="variable1" />
+                                                </Sequence.Variables>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Obtener texto 'DIV  ctl00_cphContent_r...'" sap:VirtualizedContainerService.HintSize="696,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                                                  <ui:GetValue.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="98a3e9c4e78805da50868ecb21779142" Selector="&lt;webctrl aaname='Estados Unidos de América Dólar*' css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='ctl00_cphContent_updConsulta' tag='TABLE' /&gt;&lt;webctrl parentid='ctl00_cphContent_updConsulta' tag='TD' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+                                                  </ui:GetValue.Target>
+                                                  <ui:GetValue.Value>
+                                                    <OutArgument x:TypeArguments="ui:GenericValue">[DivCtlCphcontentR]</OutArgument>
+                                                  </ui:GetValue.Value>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:GetValue>
+                                                <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="696,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="s:String[]">[variable1]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="s:String[]">[DivCtlCphcontentR.Split(“ ”)]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="696,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Int32">[cont]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <Sequence DisplayName="Test_1" sap:VirtualizedContainerService.HintSize="696,2555" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="x:String" Name="variable3" />
+                                                    <Variable x:TypeArguments="x:String" Name="variable5" />
+                                                    <Variable x:TypeArguments="sd:DataTable" Name="Dt1" />
+                                                  </Sequence.Variables>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:BuildDataTable DataTable="[Dt1]" DisplayName="Build data table" sap:VirtualizedContainerService.HintSize="654,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Dato&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="654,432" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[variable1]">
+                                                    <ui:ForEach.Body>
+                                                      <ActivityAction x:TypeArguments="x:String">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                                                        </ActivityAction.Argument>
+                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,299" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <If Condition="[item.Trim.Contains(&quot;Chileno&quot;) Or item.Trim.Contains(&quot;Colombiano&quot;)Or item.Trim.Contains(&quot;Mexicano&quot;)]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="If_7">
+                                                            <If.Then>
+                                                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{item}]" DataTable="[Dt1]" DisplayName="Add data row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                                            </If.Then>
+                                                          </If>
+                                                        </Sequence>
+                                                      </ActivityAction>
+                                                    </ui:ForEach.Body>
+                                                  </ui:ForEach>
+                                                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Dt1]" DisplayName="Para cada fila" sap:VirtualizedContainerService.HintSize="654,1564" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                                    <ui:ForEachRow.Body>
+                                                      <ActivityAction x:TypeArguments="sd:DataRow">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                                        </ActivityAction.Argument>
+                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,1417" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                                          <Sequence.Variables>
+                                                            <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="res" />
+                                                          </Sequence.Variables>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:Matches DisplayName="Coincidencias" sap:VirtualizedContainerService.HintSize="562,59" sap2010:WorkflowViewState.IdRef="Matches_5" Input="[row(0).ToString]" IsBuilderTabModified="False" Pattern="\d+(\.\d{1,9})?" RegexOption="IgnoreCase, Compiled" Result="[res]" />
+                                                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="562,1226" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[res]">
+                                                            <ui:ForEach.Body>
+                                                              <ActivityAction x:TypeArguments="x:Object">
+                                                                <ActivityAction.Argument>
+                                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                                                                </ActivityAction.Argument>
+                                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1093" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                                  <Sequence.Variables>
+                                                                    <Variable x:TypeArguments="ui:GenericValue" Name="Documento" />
+                                                                  </Sequence.Variables>
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                                                    <Assign.To>
+                                                                      <OutArgument x:TypeArguments="ui:GenericValue">[Documento]</OutArgument>
+                                                                    </Assign.To>
+                                                                    <Assign.Value>
+                                                                      <InArgument x:TypeArguments="ui:GenericValue">[item.ToString]</InArgument>
+                                                                    </Assign.Value>
+                                                                  </Assign>
+                                                                  <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                                                    <Assign.To>
+                                                                      <OutArgument x:TypeArguments="x:Object">[row(0)]</OutArgument>
+                                                                    </Assign.To>
+                                                                    <Assign.Value>
+                                                                      <InArgument x:TypeArguments="x:Object">[Documento]</InArgument>
+                                                                    </Assign.Value>
+                                                                  </Assign>
+                                                                  <If Condition="[cont = 0]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="If_8">
+                                                                    <If.Then>
+                                                                      <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="x:Object">[Origen.Rows(3).Item(2)]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="x:Object">[Documento]</InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                    </If.Then>
+                                                                  </If>
+                                                                  <If Condition="[cont = 1]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="If_9">
+                                                                    <If.Then>
+                                                                      <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="x:Object">[Origen.Rows(4).Item(2)]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="x:Object">[Documento]</InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                    </If.Then>
+                                                                  </If>
+                                                                  <If Condition="[cont = 2]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="If_10">
+                                                                    <If.Then>
+                                                                      <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="x:Object">[Origen.Rows(5).Item(2)]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="x:Object">[Documento]</InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                    </If.Then>
+                                                                  </If>
+                                                                  <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                                                    <Assign.To>
+                                                                      <OutArgument x:TypeArguments="x:Int32">[cont]</OutArgument>
+                                                                    </Assign.To>
+                                                                    <Assign.Value>
+                                                                      <InArgument x:TypeArguments="x:Int32">[cont +1]</InArgument>
+                                                                    </Assign.Value>
+                                                                  </Assign>
+                                                                </Sequence>
+                                                              </ActivityAction>
+                                                            </ui:ForEach.Body>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </ui:ForEach>
+                                                        </Sequence>
+                                                      </ActivityAction>
+                                                    </ui:ForEachRow.Body>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:ForEachRow>
+                                                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="654,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" WorkbookPath="[configuracion_global(&quot;destino TC&quot;).ToString+&quot;/Resultado_&quot;+Today.ToString(&quot;yyyy-MM-dd&quot;)+&quot;.xlsx&quot;]">
+                                                    <ui:ExcelApplicationScope.Body>
+                                                      <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                                        </ActivityAction.Argument>
+                                                        <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:ExcelWriteRange AddHeaders="True" DataTable="[Origen]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="DatosSBS">
+                                                            <ui:ExcelWriteRange.StartingCell>
+                                                              <InArgument x:TypeArguments="x:String">
+                                                                <Literal x:TypeArguments="x:String" Value="" />
+                                                              </InArgument>
+                                                            </ui:ExcelWriteRange.StartingCell>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </ui:ExcelWriteRange>
+                                                        </Sequence>
+                                                      </ActivityAction>
+                                                    </ui:ExcelApplicationScope.Body>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:ExcelApplicationScope>
+                                                </Sequence>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ui:BrowserScope.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:BrowserScope>
+                                      </Sequence>
+                                    </If.Then>
+                                  </If>
+                                  <If Condition="[inicio_global = 2]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_16">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If.Then>
+                                      <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="710,2769" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <DoWhile DisplayName="Hacer mientras" sap:VirtualizedContainerService.HintSize="668,2677" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+                                          <DoWhile.Variables>
+                                            <Variable x:TypeArguments="x:Int32" Default="0" Name="cont_reut" />
+                                            <Variable x:TypeArguments="x:String" Name="variable1" />
+                                          </DoWhile.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <DoWhile.Condition>[cont_reut &lt; 5]</DoWhile.Condition>
+                                          <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="622,2515" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If Condition="[cont_reut.ToString = &quot;0&quot;]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="580,912" sap2010:WorkflowViewState.IdRef="If_12">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If.Then>
+                                                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Anexar navegador 'Noticiase Page'" sap:VirtualizedContainerService.HintSize="435,764" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="bf0eec3efb203b0721c39aef3a298c54" Selector="&lt;html app='chrome.exe' title='*euters*' /&gt;">
+                                                  <ui:BrowserScope.Body>
+                                                    <ActivityAction x:TypeArguments="x:Object">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="401,618" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                        <Sequence.Variables>
+                                                          <Variable x:TypeArguments="ui:GenericValue" Name="Texto" />
+                                                        </Sequence.Variables>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Seleccionar elemento 'SELECT  CurrenciesConve...'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="Canadian Dollar (CAD)">
+                                                          <ui:SelectItem.Items>
+                                                            <scg:List x:TypeArguments="x:String" Capacity="50">
+                                                              <x:String>British Pound (GBP)</x:String>
+                                                              <x:String>US Dollar (USD)</x:String>
+                                                              <x:String>Euro (EUR)</x:String>
+                                                              <x:String>Canadian Dollar (CAD)</x:String>
+                                                              <x:String>Australian Dollar (AUD)</x:String>
+                                                              <x:String>Swiss Franc (CHF)</x:String>
+                                                              <x:String>United Arab Emirates Dirham (AED)</x:String>
+                                                              <x:String>Albania Lek (ALL)</x:String>
+                                                              <x:String>Angola Kwanza (AOA)</x:String>
+                                                              <x:String>Argentina Peso (ARS)</x:String>
+                                                              <x:String>Bangladesh Taka (BDT)</x:String>
+                                                              <x:String>Bulgaria Lev (BGN)</x:String>
+                                                              <x:String>Bahrain Dinar (BHD)</x:String>
+                                                              <x:String>Brunei Dollar (BND)</x:String>
+                                                              <x:String>Bolivia Boliviano (BOB)</x:String>
+                                                              <x:String>Brazil Real (BRL)</x:String>
+                                                              <x:String>Belarus Ruble (BYR)</x:String>
+                                                              <x:String>Congo Franc (CDF)</x:String>
+                                                              <x:String>Chile Peso (CLP)</x:String>
+                                                              <x:String>Colombia Peso (COP)</x:String>
+                                                              <x:String>China Yuan Renminbi (CNY)</x:String>
+                                                              <x:String>Costa Rica Colon (CRC)</x:String>
+                                                              <x:String>Czech Koruna (CZK)</x:String>
+                                                              <x:String>Danish Krone (DKK)</x:String>
+                                                              <x:String>Egypt Pound (EGP)</x:String>
+                                                              <x:String>Fiji Dollar (FJD)</x:String>
+                                                              <x:String>Hong Kong Dollar (HKD)</x:String>
+                                                              <x:String>Hungary Forint (HUF)</x:String>
+                                                              <x:String>Indonesian Rupiah (IDR)</x:String>
+                                                              <x:String>Israel Shekel (ILS)</x:String>
+                                                              <x:String>India Rupee (INR)</x:String>
+                                                              <x:String>Iceland Krona (ISK)</x:String>
+                                                              <x:String>Japanese Yen (JPY)</x:String>
+                                                              <x:String>Korea Won (KRW)</x:String>
+                                                              <x:String>Kuwaiti Dinar (KWD)</x:String>
+                                                              <x:String>Lithuania Litas (LTL)</x:String>
+                                                              <x:String>Mexican Peso (MXN)</x:String>
+                                                              <x:String>Malaysian Ringgit (MYR)</x:String>
+                                                              <x:String>Norwegian Krone (NOK)</x:String>
+                                                              <x:String>New Zealand Dollar (NZD)</x:String>
+                                                              <x:String>Philippines Peso (PHP)</x:String>
+                                                              <x:String>Pakistan Rupee (PKR)</x:String>
+                                                              <x:String>Russia (new) Ruble (RUB)</x:String>
+                                                              <x:String>Saudi Arabian Riyal (SAR)</x:String>
+                                                              <x:String>Singapore Dollar (SGD)</x:String>
+                                                              <x:String>Swedish Krona (SEK)</x:String>
+                                                              <x:String>Thai Baht (THB)</x:String>
+                                                              <x:String>Taiwanese Dollar (TWD)</x:String>
+                                                              <x:String>South African Rand (ZAR)</x:String>
+                                                              <x:String>Croatia Kuna (HRK)</x:String>
+                                                            </scg:List>
+                                                          </ui:SelectItem.Items>
+                                                          <ui:SelectItem.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ea0fabbb927eaa1019ce1f89747b8a6e" Selector="&lt;webctrl id='CurrenciesConversion_FromCurrencies' tag='SELECT' /&gt;" WaitForReady="COMPLETE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:SelectItem.Target>
+                                                        </ui:SelectItem>
+                                                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'INPUT  CurrenciesConver...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                                          <ui:Click.CursorPosition>
+                                                            <ui:CursorPosition OffsetX="12" OffsetY="8" Position="TopLeft" />
+                                                          </ui:Click.CursorPosition>
+                                                          <ui:Click.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="449ca0326b48d8475d422986e3d2b45a" Selector="&lt;webctrl id='CurrenciesConversion_Convert' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:Click.Target>
+                                                        </ui:Click>
+                                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'INPUT  destAmt'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
+                                                          <ui:GetValue.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="110362fec8241ce6c840d2694eba8815" Selector="&lt;webctrl id='destAmt' tag='INPUT' /&gt;">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                              <ui:Target.WaitForReady>
+                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                              </ui:Target.WaitForReady>
+                                                            </ui:Target>
+                                                          </ui:GetValue.Target>
+                                                          <ui:GetValue.Value>
+                                                            <OutArgument x:TypeArguments="ui:GenericValue">[Texto]</OutArgument>
+                                                          </ui:GetValue.Value>
+                                                        </ui:GetValue>
+                                                        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="359,60" sap2010:WorkflowViewState.IdRef="Assign_26">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Object">[Origen.Rows(6).Item(2)]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Object">[Texto]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </ui:BrowserScope.Body>
+                                                </ui:BrowserScope>
+                                              </If.Then>
+                                            </If>
+                                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="580,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                            <If Condition="[cont_reut.ToString = &quot;1&quot;]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="580,51" sap2010:WorkflowViewState.IdRef="If_13">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If.Then>
+                                                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Anexar navegador 'Noticiase Page'" sap:VirtualizedContainerService.HintSize="435,764" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="84a68c2ebdd2e7b5063e899def114316" Selector="&lt;html app='chrome.exe' title='*euters*' /&gt;">
+                                                  <ui:BrowserScope.Body>
+                                                    <ActivityAction x:TypeArguments="x:Object">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="401,618" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                                        <Sequence.Variables>
+                                                          <Variable x:TypeArguments="ui:GenericValue" Name="Texto" />
+                                                        </Sequence.Variables>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Seleccionar elemento 'SELECT  CurrenciesConve...'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="Chile Peso (CLP)">
+                                                          <ui:SelectItem.Items>
+                                                            <scg:List x:TypeArguments="x:String" Capacity="50">
+                                                              <x:String>British Pound (GBP)</x:String>
+                                                              <x:String>US Dollar (USD)</x:String>
+                                                              <x:String>Euro (EUR)</x:String>
+                                                              <x:String>Canadian Dollar (CAD)</x:String>
+                                                              <x:String>Australian Dollar (AUD)</x:String>
+                                                              <x:String>Swiss Franc (CHF)</x:String>
+                                                              <x:String>United Arab Emirates Dirham (AED)</x:String>
+                                                              <x:String>Albania Lek (ALL)</x:String>
+                                                              <x:String>Angola Kwanza (AOA)</x:String>
+                                                              <x:String>Argentina Peso (ARS)</x:String>
+                                                              <x:String>Bangladesh Taka (BDT)</x:String>
+                                                              <x:String>Bulgaria Lev (BGN)</x:String>
+                                                              <x:String>Bahrain Dinar (BHD)</x:String>
+                                                              <x:String>Brunei Dollar (BND)</x:String>
+                                                              <x:String>Bolivia Boliviano (BOB)</x:String>
+                                                              <x:String>Brazil Real (BRL)</x:String>
+                                                              <x:String>Belarus Ruble (BYR)</x:String>
+                                                              <x:String>Congo Franc (CDF)</x:String>
+                                                              <x:String>Chile Peso (CLP)</x:String>
+                                                              <x:String>Colombia Peso (COP)</x:String>
+                                                              <x:String>China Yuan Renminbi (CNY)</x:String>
+                                                              <x:String>Costa Rica Colon (CRC)</x:String>
+                                                              <x:String>Czech Koruna (CZK)</x:String>
+                                                              <x:String>Danish Krone (DKK)</x:String>
+                                                              <x:String>Egypt Pound (EGP)</x:String>
+                                                              <x:String>Fiji Dollar (FJD)</x:String>
+                                                              <x:String>Hong Kong Dollar (HKD)</x:String>
+                                                              <x:String>Hungary Forint (HUF)</x:String>
+                                                              <x:String>Indonesian Rupiah (IDR)</x:String>
+                                                              <x:String>Israel Shekel (ILS)</x:String>
+                                                              <x:String>India Rupee (INR)</x:String>
+                                                              <x:String>Iceland Krona (ISK)</x:String>
+                                                              <x:String>Japanese Yen (JPY)</x:String>
+                                                              <x:String>Korea Won (KRW)</x:String>
+                                                              <x:String>Kuwaiti Dinar (KWD)</x:String>
+                                                              <x:String>Lithuania Litas (LTL)</x:String>
+                                                              <x:String>Mexican Peso (MXN)</x:String>
+                                                              <x:String>Malaysian Ringgit (MYR)</x:String>
+                                                              <x:String>Norwegian Krone (NOK)</x:String>
+                                                              <x:String>New Zealand Dollar (NZD)</x:String>
+                                                              <x:String>Philippines Peso (PHP)</x:String>
+                                                              <x:String>Pakistan Rupee (PKR)</x:String>
+                                                              <x:String>Russia (new) Ruble (RUB)</x:String>
+                                                              <x:String>Saudi Arabian Riyal (SAR)</x:String>
+                                                              <x:String>Singapore Dollar (SGD)</x:String>
+                                                              <x:String>Swedish Krona (SEK)</x:String>
+                                                              <x:String>Thai Baht (THB)</x:String>
+                                                              <x:String>Taiwanese Dollar (TWD)</x:String>
+                                                              <x:String>South African Rand (ZAR)</x:String>
+                                                              <x:String>Croatia Kuna (HRK)</x:String>
+                                                            </scg:List>
+                                                          </ui:SelectItem.Items>
+                                                          <ui:SelectItem.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ddefac72c2eec752d255efb0ff58c9e6" Selector="&lt;webctrl id='CurrenciesConversion_FromCurrencies' tag='SELECT' /&gt;" WaitForReady="COMPLETE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:SelectItem.Target>
+                                                        </ui:SelectItem>
+                                                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'INPUT  CurrenciesConver...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                                          <ui:Click.CursorPosition>
+                                                            <ui:CursorPosition OffsetX="4" OffsetY="3" Position="TopLeft" />
+                                                          </ui:Click.CursorPosition>
+                                                          <ui:Click.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="449ca0326b48d8475d422986e3d2b45a" Selector="&lt;webctrl id='CurrenciesConversion_Convert' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:Click.Target>
+                                                        </ui:Click>
+                                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'INPUT  destAmt'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                                                          <ui:GetValue.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="03428546c7ce5dbba689a43db8d43533" Selector="&lt;webctrl id='destAmt' tag='INPUT' /&gt;">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                              <ui:Target.WaitForReady>
+                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                              </ui:Target.WaitForReady>
+                                                            </ui:Target>
+                                                          </ui:GetValue.Target>
+                                                          <ui:GetValue.Value>
+                                                            <OutArgument x:TypeArguments="ui:GenericValue">[Texto]</OutArgument>
+                                                          </ui:GetValue.Value>
+                                                        </ui:GetValue>
+                                                        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="359,60" sap2010:WorkflowViewState.IdRef="Assign_27">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Object">[Origen.Rows(7).Item(2)]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Object">[Texto]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </ui:BrowserScope.Body>
+                                                </ui:BrowserScope>
+                                              </If.Then>
+                                            </If>
+                                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="580,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                                            <If Condition="[cont_reut.ToString = &quot;2&quot;]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="580,912" sap2010:WorkflowViewState.IdRef="If_14">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If.Then>
+                                                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Anexar navegador 'Noticiase Page'" sap:VirtualizedContainerService.HintSize="435,764" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="5afcbb9d9b7bf2e1aad00830bb394280" Selector="&lt;html app='chrome.exe' title='*euters*' /&gt;">
+                                                  <ui:BrowserScope.Body>
+                                                    <ActivityAction x:TypeArguments="x:Object">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="401,618" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                                        <Sequence.Variables>
+                                                          <Variable x:TypeArguments="ui:GenericValue" Name="Texto" />
+                                                        </Sequence.Variables>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Seleccionar elemento 'SELECT  CurrenciesConve...'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="Colombia Peso (COP)">
+                                                          <ui:SelectItem.Items>
+                                                            <scg:List x:TypeArguments="x:String" Capacity="50">
+                                                              <x:String>British Pound (GBP)</x:String>
+                                                              <x:String>US Dollar (USD)</x:String>
+                                                              <x:String>Euro (EUR)</x:String>
+                                                              <x:String>Canadian Dollar (CAD)</x:String>
+                                                              <x:String>Australian Dollar (AUD)</x:String>
+                                                              <x:String>Swiss Franc (CHF)</x:String>
+                                                              <x:String>United Arab Emirates Dirham (AED)</x:String>
+                                                              <x:String>Albania Lek (ALL)</x:String>
+                                                              <x:String>Angola Kwanza (AOA)</x:String>
+                                                              <x:String>Argentina Peso (ARS)</x:String>
+                                                              <x:String>Bangladesh Taka (BDT)</x:String>
+                                                              <x:String>Bulgaria Lev (BGN)</x:String>
+                                                              <x:String>Bahrain Dinar (BHD)</x:String>
+                                                              <x:String>Brunei Dollar (BND)</x:String>
+                                                              <x:String>Bolivia Boliviano (BOB)</x:String>
+                                                              <x:String>Brazil Real (BRL)</x:String>
+                                                              <x:String>Belarus Ruble (BYR)</x:String>
+                                                              <x:String>Congo Franc (CDF)</x:String>
+                                                              <x:String>Chile Peso (CLP)</x:String>
+                                                              <x:String>Colombia Peso (COP)</x:String>
+                                                              <x:String>China Yuan Renminbi (CNY)</x:String>
+                                                              <x:String>Costa Rica Colon (CRC)</x:String>
+                                                              <x:String>Czech Koruna (CZK)</x:String>
+                                                              <x:String>Danish Krone (DKK)</x:String>
+                                                              <x:String>Egypt Pound (EGP)</x:String>
+                                                              <x:String>Fiji Dollar (FJD)</x:String>
+                                                              <x:String>Hong Kong Dollar (HKD)</x:String>
+                                                              <x:String>Hungary Forint (HUF)</x:String>
+                                                              <x:String>Indonesian Rupiah (IDR)</x:String>
+                                                              <x:String>Israel Shekel (ILS)</x:String>
+                                                              <x:String>India Rupee (INR)</x:String>
+                                                              <x:String>Iceland Krona (ISK)</x:String>
+                                                              <x:String>Japanese Yen (JPY)</x:String>
+                                                              <x:String>Korea Won (KRW)</x:String>
+                                                              <x:String>Kuwaiti Dinar (KWD)</x:String>
+                                                              <x:String>Lithuania Litas (LTL)</x:String>
+                                                              <x:String>Mexican Peso (MXN)</x:String>
+                                                              <x:String>Malaysian Ringgit (MYR)</x:String>
+                                                              <x:String>Norwegian Krone (NOK)</x:String>
+                                                              <x:String>New Zealand Dollar (NZD)</x:String>
+                                                              <x:String>Philippines Peso (PHP)</x:String>
+                                                              <x:String>Pakistan Rupee (PKR)</x:String>
+                                                              <x:String>Russia (new) Ruble (RUB)</x:String>
+                                                              <x:String>Saudi Arabian Riyal (SAR)</x:String>
+                                                              <x:String>Singapore Dollar (SGD)</x:String>
+                                                              <x:String>Swedish Krona (SEK)</x:String>
+                                                              <x:String>Thai Baht (THB)</x:String>
+                                                              <x:String>Taiwanese Dollar (TWD)</x:String>
+                                                              <x:String>South African Rand (ZAR)</x:String>
+                                                              <x:String>Croatia Kuna (HRK)</x:String>
+                                                            </scg:List>
+                                                          </ui:SelectItem.Items>
+                                                          <ui:SelectItem.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ddefac72c2eec752d255efb0ff58c9e6" Selector="&lt;webctrl id='CurrenciesConversion_FromCurrencies' tag='SELECT' /&gt;" WaitForReady="COMPLETE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:SelectItem.Target>
+                                                        </ui:SelectItem>
+                                                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'INPUT  CurrenciesConver...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                                          <ui:Click.CursorPosition>
+                                                            <ui:CursorPosition OffsetX="6" OffsetY="13" Position="TopLeft" />
+                                                          </ui:Click.CursorPosition>
+                                                          <ui:Click.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="449ca0326b48d8475d422986e3d2b45a" Selector="&lt;webctrl id='CurrenciesConversion_Convert' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:Click.Target>
+                                                        </ui:Click>
+                                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'INPUT  destAmt'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
+                                                          <ui:GetValue.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f3aea333237176f1262da151a2e0e4a7" Selector="&lt;webctrl id='destAmt' tag='INPUT' /&gt;">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                              <ui:Target.WaitForReady>
+                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                              </ui:Target.WaitForReady>
+                                                            </ui:Target>
+                                                          </ui:GetValue.Target>
+                                                          <ui:GetValue.Value>
+                                                            <OutArgument x:TypeArguments="ui:GenericValue">[Texto]</OutArgument>
+                                                          </ui:GetValue.Value>
+                                                        </ui:GetValue>
+                                                        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="359,60" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Object">[Origen.Rows(8).Item(2)]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Object">[Texto]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </ui:BrowserScope.Body>
+                                                </ui:BrowserScope>
+                                              </If.Then>
+                                            </If>
+                                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="580,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                                            <If Condition="[cont_reut.ToString= &quot;3&quot;]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="580,51" sap2010:WorkflowViewState.IdRef="If_15">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If.Then>
+                                                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Anexar navegador 'Noticiase Page'" sap:VirtualizedContainerService.HintSize="435,764" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="2bbcae7d9d20065532511a40a0ad8f63" Selector="&lt;html app='chrome.exe' title='*euters*' /&gt;">
+                                                  <ui:BrowserScope.Body>
+                                                    <ActivityAction x:TypeArguments="x:Object">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="401,618" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                                        <Sequence.Variables>
+                                                          <Variable x:TypeArguments="ui:GenericValue" Name="Texto" />
+                                                        </Sequence.Variables>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Seleccionar elemento 'SELECT  CurrenciesConve...'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_4" Item="Mexican Peso (MXN)">
+                                                          <ui:SelectItem.Items>
+                                                            <scg:List x:TypeArguments="x:String" Capacity="50">
+                                                              <x:String>British Pound (GBP)</x:String>
+                                                              <x:String>US Dollar (USD)</x:String>
+                                                              <x:String>Euro (EUR)</x:String>
+                                                              <x:String>Canadian Dollar (CAD)</x:String>
+                                                              <x:String>Australian Dollar (AUD)</x:String>
+                                                              <x:String>Swiss Franc (CHF)</x:String>
+                                                              <x:String>United Arab Emirates Dirham (AED)</x:String>
+                                                              <x:String>Albania Lek (ALL)</x:String>
+                                                              <x:String>Angola Kwanza (AOA)</x:String>
+                                                              <x:String>Argentina Peso (ARS)</x:String>
+                                                              <x:String>Bangladesh Taka (BDT)</x:String>
+                                                              <x:String>Bulgaria Lev (BGN)</x:String>
+                                                              <x:String>Bahrain Dinar (BHD)</x:String>
+                                                              <x:String>Brunei Dollar (BND)</x:String>
+                                                              <x:String>Bolivia Boliviano (BOB)</x:String>
+                                                              <x:String>Brazil Real (BRL)</x:String>
+                                                              <x:String>Belarus Ruble (BYR)</x:String>
+                                                              <x:String>Congo Franc (CDF)</x:String>
+                                                              <x:String>Chile Peso (CLP)</x:String>
+                                                              <x:String>Colombia Peso (COP)</x:String>
+                                                              <x:String>China Yuan Renminbi (CNY)</x:String>
+                                                              <x:String>Costa Rica Colon (CRC)</x:String>
+                                                              <x:String>Czech Koruna (CZK)</x:String>
+                                                              <x:String>Danish Krone (DKK)</x:String>
+                                                              <x:String>Egypt Pound (EGP)</x:String>
+                                                              <x:String>Fiji Dollar (FJD)</x:String>
+                                                              <x:String>Hong Kong Dollar (HKD)</x:String>
+                                                              <x:String>Hungary Forint (HUF)</x:String>
+                                                              <x:String>Indonesian Rupiah (IDR)</x:String>
+                                                              <x:String>Israel Shekel (ILS)</x:String>
+                                                              <x:String>India Rupee (INR)</x:String>
+                                                              <x:String>Iceland Krona (ISK)</x:String>
+                                                              <x:String>Japanese Yen (JPY)</x:String>
+                                                              <x:String>Korea Won (KRW)</x:String>
+                                                              <x:String>Kuwaiti Dinar (KWD)</x:String>
+                                                              <x:String>Lithuania Litas (LTL)</x:String>
+                                                              <x:String>Mexican Peso (MXN)</x:String>
+                                                              <x:String>Malaysian Ringgit (MYR)</x:String>
+                                                              <x:String>Norwegian Krone (NOK)</x:String>
+                                                              <x:String>New Zealand Dollar (NZD)</x:String>
+                                                              <x:String>Philippines Peso (PHP)</x:String>
+                                                              <x:String>Pakistan Rupee (PKR)</x:String>
+                                                              <x:String>Russia (new) Ruble (RUB)</x:String>
+                                                              <x:String>Saudi Arabian Riyal (SAR)</x:String>
+                                                              <x:String>Singapore Dollar (SGD)</x:String>
+                                                              <x:String>Swedish Krona (SEK)</x:String>
+                                                              <x:String>Thai Baht (THB)</x:String>
+                                                              <x:String>Taiwanese Dollar (TWD)</x:String>
+                                                              <x:String>South African Rand (ZAR)</x:String>
+                                                              <x:String>Croatia Kuna (HRK)</x:String>
+                                                            </scg:List>
+                                                          </ui:SelectItem.Items>
+                                                          <ui:SelectItem.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ddefac72c2eec752d255efb0ff58c9e6" Selector="&lt;webctrl id='CurrenciesConversion_FromCurrencies' tag='SELECT' /&gt;" WaitForReady="COMPLETE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:SelectItem.Target>
+                                                        </ui:SelectItem>
+                                                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'INPUT  CurrenciesConver...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                                          <ui:Click.CursorPosition>
+                                                            <ui:CursorPosition OffsetX="16" OffsetY="1" Position="TopLeft" />
+                                                          </ui:Click.CursorPosition>
+                                                          <ui:Click.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="449ca0326b48d8475d422986e3d2b45a" Selector="&lt;webctrl id='CurrenciesConversion_Convert' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:Click.Target>
+                                                        </ui:Click>
+                                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'INPUT  destAmt'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_6">
+                                                          <ui:GetValue.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="03428546c7ce5dbba689a43db8d43533" Selector="&lt;webctrl id='destAmt' tag='INPUT' /&gt;">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                              <ui:Target.WaitForReady>
+                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                              </ui:Target.WaitForReady>
+                                                            </ui:Target>
+                                                          </ui:GetValue.Target>
+                                                          <ui:GetValue.Value>
+                                                            <OutArgument x:TypeArguments="ui:GenericValue">[Texto]</OutArgument>
+                                                          </ui:GetValue.Value>
+                                                        </ui:GetValue>
+                                                        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="359,60" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Object">[Origen.Rows(9).Item(2)]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Object">[Texto]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </ui:BrowserScope.Body>
+                                                </ui:BrowserScope>
+                                              </If.Then>
+                                            </If>
+                                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="580,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" WorkbookPath="[configuracion_global(&quot;destino TC&quot;).ToString+&quot;/Resultado_&quot;+Today.ToString(&quot;yyyy-MM-dd&quot;)+&quot;.xlsx&quot;]">
+                                              <ui:ExcelApplicationScope.Body>
+                                                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:ExcelWriteRange AddHeaders="True" DataTable="[Origen]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_3" SheetName="DatosSBS">
+                                                      <ui:ExcelWriteRange.StartingCell>
+                                                        <InArgument x:TypeArguments="x:String">
+                                                          <Literal x:TypeArguments="x:String" Value="" />
+                                                        </InArgument>
+                                                      </ui:ExcelWriteRange.StartingCell>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:ExcelWriteRange>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ui:ExcelApplicationScope.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ExcelApplicationScope>
+                                            <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="580,60" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Int32">[cont_reut]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Int32">[cont_reut +1]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </Sequence>
+                                        </DoWhile>
+                                      </Sequence>
+                                    </If.Then>
+                                  </If>
+                                  <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_31">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[inicio_global]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[inicio_global+1]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
                                 </Sequence>
                               </TryCatch.Try>
                               <TryCatch.Catches>
-                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="907,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -642,7 +1586,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <State.Transitions>
-                            <Transition DisplayName="T2" sap2010:WorkflowViewState.IdRef="Transition_4">
+                            <Transition DisplayName="Error" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:PointCollection x:Key="ConnectorLocation">353,495.9 59.7,495.9 59.7,330.5</av:PointCollection>
@@ -650,11 +1594,52 @@
                                   <x:Int32 x:Key="DestConnectionPointIndex">3</x:Int32>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
+                              <Transition.Condition>[SystemErrorGuardadodeDatos IsNot Nothing]</Transition.Condition>
                               <Transition.To>
-                                <State x:Name="__ReferenceID0" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                                <State x:Name="__ReferenceID1" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                                  <State.Entry>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Error en proceso&quot;]" />
+                                  </State.Entry>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">53,269.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">134,61</av:Size>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </State>
+                              </Transition.To>
+                            </Transition>
+                            <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:PointCollection x:Key="ConnectorLocation">378.8,439.5 378.8,409.5 416.6,409.5 416.6,320.5</av:PointCollection>
+                                  <x:Int32 x:Key="SrcConnectionPointIndex">10</x:Int32>
+                                  <x:Int32 x:Key="DestConnectionPointIndex">31</x:Int32>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Transition.To>
+                                <x:Reference>__ReferenceID0</x:Reference>
+                              </Transition.To>
+                              <Transition.Condition>[SystemErrorGuardadodeDatos Is Nothing And inicio_global &lt;=3]</Transition.Condition>
+                            </Transition>
+                            <Transition DisplayName="Final" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:PointCollection x:Key="ConnectorLocation">353,463 323,463 323,600.5 109.9,600.5 109.9,570.5</av:PointCollection>
+                                  <x:Int32 x:Key="SrcConnectionPointIndex">17</x:Int32>
+                                  <x:Int32 x:Key="DestConnectionPointIndex">27</x:Int32>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Transition.Condition>[SystemErrorGuardadodeDatos Is Nothing And inicio_global = 3]</Transition.Condition>
+                              <Transition.To>
+                                <State x:Name="__ReferenceID3" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_6" IsFinal="True">
+                                  <State.Entry>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Proceso termiando correctamente&quot;]" />
+                                  </State.Entry>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">63,509.5</av:Point>
                                       <av:Size x:Key="ShapeSize">134,61</av:Size>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
@@ -679,7 +1664,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Transition.To>
-                        <x:Reference>__ReferenceID0</x:Reference>
+                        <x:Reference>__ReferenceID1</x:Reference>
                       </Transition.To>
                       <Transition.Condition>[SystemErrorOpenWeb Isnot Nothing]</Transition.Condition>
                     </Transition>
@@ -699,7 +1684,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Transition.To>
-                <x:Reference>__ReferenceID0</x:Reference>
+                <x:Reference>__ReferenceID1</x:Reference>
               </Transition.To>
               <Transition.Condition>[SystemErrorCredentials Isnot Nothing]</Transition.Condition>
             </Transition>
@@ -712,9 +1697,10 @@
             <Variable x:TypeArguments="x:Int32" Name="conteoGlobal" />
           </State.Variables>
         </State>
-        <x:Reference>__ReferenceID0</x:Reference>
         <x:Reference>__ReferenceID1</x:Reference>
+        <x:Reference>__ReferenceID0</x:Reference>
         <x:Reference>__ReferenceID2</x:Reference>
+        <x:Reference>__ReferenceID3</x:Reference>
         <StateMachine.Variables>
           <Variable x:TypeArguments="njl:JObject" Default="[New JObject]" Name="configuracion_global" />
           <Variable x:TypeArguments="sd:DataTable" Name="origen" />
